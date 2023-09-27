@@ -45,10 +45,7 @@ struct FilmsListView: View {
                             .font(Font.system(size: 14, weight: .light))
                             .foregroundColor(Color.gray)
                     }
-                    .onAppear { viewModel.requestMoreItemsIfNeeded(index: index) }
-                    .onLongPressGesture(perform: {
-                        
-                    })
+                    .onAppear { viewModel.requestMoreItemsIfNeeded(itemsCount: viewModel.films.count, index: index) }
                 }
             }
             .listStyle(.inset)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B922A40D2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */; };
 		B922A4102AC4E50A008C3BA7 /* FilmsTopMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922A40F2AC4E50A008C3BA7 /* FilmsTopMethod.swift */; };
+		B922A4132AC4EA7F008C3BA7 /* PaginatonSubscribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922A4122AC4EA7F008C3BA7 /* PaginatonSubscribing.swift */; };
 		B954C1C02AC1D03000100AC5 /* CinemaRouletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1BF2AC1D03000100AC5 /* CinemaRouletteApp.swift */; };
 		B954C1C22AC1D03000100AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1C12AC1D03000100AC5 /* ContentView.swift */; };
 		B954C1C42AC1D03300100AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954C1C32AC1D03300100AC5 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMethodDescribing.swift; sourceTree = "<group>"; };
 		B922A40F2AC4E50A008C3BA7 /* FilmsTopMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTopMethod.swift; sourceTree = "<group>"; };
 		B922A4112AC4E895008C3BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B922A4122AC4EA7F008C3BA7 /* PaginatonSubscribing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatonSubscribing.swift; sourceTree = "<group>"; };
 		B954C1BC2AC1D03000100AC5 /* CinemaRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954C1BF2AC1D03000100AC5 /* CinemaRouletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRouletteApp.swift; sourceTree = "<group>"; };
 		B954C1C12AC1D03000100AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				B922A40E2AC4E4D2008C3BA7 /* Methods */,
 				B9BDCFE62AC38FD100D6507D /* ApiClient.swift */,
 				B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */,
+				B922A4122AC4EA7F008C3BA7 /* PaginatonSubscribing.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9BDCFEB2AC4402100D6507D /* FilmView.swift in Sources */,
+				B922A4132AC4EA7F008C3BA7 /* PaginatonSubscribing.swift in Sources */,
 				B922A40D2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift in Sources */,
 				B922A4102AC4E50A008C3BA7 /* FilmsTopMethod.swift in Sources */,
 				B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */,
