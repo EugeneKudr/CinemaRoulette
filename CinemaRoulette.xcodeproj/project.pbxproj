@@ -14,6 +14,10 @@
 		B954C1D12AC1D03300100AC5 /* CinemaRouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1D02AC1D03300100AC5 /* CinemaRouletteTests.swift */; };
 		B954C1DB2AC1D03300100AC5 /* CinemaRouletteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1DA2AC1D03300100AC5 /* CinemaRouletteUITests.swift */; };
 		B954C1DD2AC1D03300100AC5 /* CinemaRouletteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1DC2AC1D03300100AC5 /* CinemaRouletteUITestsLaunchTests.swift */; };
+		B954C1F12AC2F3E000100AC5 /* FilmsTopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1F02AC2F3E000100AC5 /* FilmsTopModel.swift */; };
+		B9BDCFE42AC38C2F00D6507D /* FilmsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */; };
+		B9BDCFE72AC38FD100D6507D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE62AC38FD100D6507D /* ApiClient.swift */; };
+		B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE82AC399D000D6507D /* FilmsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		B954C1D62AC1D03300100AC5 /* CinemaRouletteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaRouletteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954C1DA2AC1D03300100AC5 /* CinemaRouletteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRouletteUITests.swift; sourceTree = "<group>"; };
 		B954C1DC2AC1D03300100AC5 /* CinemaRouletteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRouletteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B954C1F02AC2F3E000100AC5 /* FilmsTopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilmsTopModel.swift; path = ../../../FilmsTopModel.swift; sourceTree = "<group>"; };
+		B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewModel.swift; sourceTree = "<group>"; };
+		B9BDCFE62AC38FD100D6507D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		B9BDCFE82AC399D000D6507D /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		B954C1BE2AC1D03000100AC5 /* CinemaRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				B9BDCFE52AC38D0500D6507D /* Network */,
+				B9BDCFE22AC38C1300D6507D /* Views */,
+				B954C1EF2AC2F3B900100AC5 /* Models */,
 				B954C1BF2AC1D03000100AC5 /* CinemaRouletteApp.swift */,
 				B954C1C12AC1D03000100AC5 /* ContentView.swift */,
 				B954C1C32AC1D03300100AC5 /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				B954C1DC2AC1D03300100AC5 /* CinemaRouletteUITestsLaunchTests.swift */,
 			);
 			path = CinemaRouletteUITests;
+			sourceTree = "<group>";
+		};
+		B954C1EF2AC2F3B900100AC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B954C1F02AC2F3E000100AC5 /* FilmsTopModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9BDCFE22AC38C1300D6507D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */,
+				B9BDCFE82AC399D000D6507D /* FilmsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9BDCFE52AC38D0500D6507D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B9BDCFE62AC38FD100D6507D /* ApiClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */,
 				B954C1C22AC1D03000100AC5 /* ContentView.swift in Sources */,
+				B954C1F12AC2F3E000100AC5 /* FilmsTopModel.swift in Sources */,
+				B9BDCFE42AC38C2F00D6507D /* FilmsListViewModel.swift in Sources */,
 				B954C1C02AC1D03000100AC5 /* CinemaRouletteApp.swift in Sources */,
+				B9BDCFE72AC38FD100D6507D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
