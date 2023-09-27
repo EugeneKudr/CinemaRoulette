@@ -14,7 +14,7 @@ struct FilmsListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.films, id: \.self) { film in
+                ForEach(viewModel.films.enumerated().map({ $0 }), id: \.element.filmId) { index, film in
                     HStack {
                         if let urlString = film.posterUrlPreview {
                             AsyncImage(url: URL(string: urlString)) { image in
@@ -23,7 +23,9 @@ struct FilmsListView: View {
                                     .scaledToFit()
                                     .frame(width: 48, height: 72)
                             } placeholder: {
-                                ProgressView()
+                                Rectangle()
+                                    .fill(Color.gray)
+                                    .frame(width: 48, height: 72)
                             }
             
                         }
@@ -43,9 +45,15 @@ struct FilmsListView: View {
                             .font(Font.system(size: 14, weight: .light))
                             .foregroundColor(Color.gray)
                     }
+                    .onAppear { viewModel.requestMoreItemsIfNeeded(index: index) }
+                    .onLongPressGesture(perform: {
+                        
+                    })
                 }
             }
+            .listStyle(.inset)
         }
+        .navigationTitle("Топ 250")
     }
         
     

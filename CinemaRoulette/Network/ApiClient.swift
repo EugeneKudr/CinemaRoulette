@@ -9,8 +9,8 @@ import Foundation
 
 public final class ApiClient {
     
-    public func request<T: Decodable>(urlString: String) async throws -> T {
-        guard let url = URL(string: urlString) else { throw ApiError.invalidURL }
+    public func request<T: Decodable>(_ method: ApiMethodDescribing) async throws -> T {
+        guard let url = URL(string: method.urlString) else { throw ApiError.invalidURL }
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("f35b2b5d-5bda-4ec3-9d8e-17d9110b92a8", forHTTPHeaderField: "X-API-KEY")

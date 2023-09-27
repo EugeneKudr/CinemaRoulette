@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B922A40D2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */; };
+		B922A4102AC4E50A008C3BA7 /* FilmsTopMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922A40F2AC4E50A008C3BA7 /* FilmsTopMethod.swift */; };
 		B954C1C02AC1D03000100AC5 /* CinemaRouletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1BF2AC1D03000100AC5 /* CinemaRouletteApp.swift */; };
 		B954C1C22AC1D03000100AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954C1C12AC1D03000100AC5 /* ContentView.swift */; };
 		B954C1C42AC1D03300100AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954C1C32AC1D03300100AC5 /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 		B9BDCFE42AC38C2F00D6507D /* FilmsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */; };
 		B9BDCFE72AC38FD100D6507D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE62AC38FD100D6507D /* ApiClient.swift */; };
 		B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE82AC399D000D6507D /* FilmsListView.swift */; };
+		B9BDCFEB2AC4402100D6507D /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFEA2AC4402100D6507D /* FilmView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMethodDescribing.swift; sourceTree = "<group>"; };
+		B922A40F2AC4E50A008C3BA7 /* FilmsTopMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTopMethod.swift; sourceTree = "<group>"; };
+		B922A4112AC4E895008C3BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B954C1BC2AC1D03000100AC5 /* CinemaRoulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaRoulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954C1BF2AC1D03000100AC5 /* CinemaRouletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRouletteApp.swift; sourceTree = "<group>"; };
 		B954C1C12AC1D03000100AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,7 @@
 		B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewModel.swift; sourceTree = "<group>"; };
 		B9BDCFE62AC38FD100D6507D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		B9BDCFE82AC399D000D6507D /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
+		B9BDCFEA2AC4402100D6507D /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B922A40E2AC4E4D2008C3BA7 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				B922A40F2AC4E50A008C3BA7 /* FilmsTopMethod.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
 		B954C1B32AC1D03000100AC5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +117,7 @@
 		B954C1BE2AC1D03000100AC5 /* CinemaRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				B922A4112AC4E895008C3BA7 /* Info.plist */,
 				B9BDCFE52AC38D0500D6507D /* Network */,
 				B9BDCFE22AC38C1300D6507D /* Views */,
 				B954C1EF2AC2F3B900100AC5 /* Models */,
@@ -151,6 +167,7 @@
 			children = (
 				B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */,
 				B9BDCFE82AC399D000D6507D /* FilmsListView.swift */,
+				B9BDCFEA2AC4402100D6507D /* FilmView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +175,9 @@
 		B9BDCFE52AC38D0500D6507D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B922A40E2AC4E4D2008C3BA7 /* Methods */,
 				B9BDCFE62AC38FD100D6507D /* ApiClient.swift */,
+				B922A40C2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -293,6 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BDCFEB2AC4402100D6507D /* FilmView.swift in Sources */,
+				B922A40D2AC4E2A4008C3BA7 /* ApiMethodDescribing.swift in Sources */,
+				B922A4102AC4E50A008C3BA7 /* FilmsTopMethod.swift in Sources */,
 				B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */,
 				B954C1C22AC1D03000100AC5 /* ContentView.swift in Sources */,
 				B954C1F12AC2F3E000100AC5 /* FilmsTopModel.swift in Sources */,
@@ -457,13 +479,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CinemaRoulette/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SD5MK4386;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CinemaRoulette/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,13 +510,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CinemaRoulette/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SD5MK4386;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CinemaRoulette/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
