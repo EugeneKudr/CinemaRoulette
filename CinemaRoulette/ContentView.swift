@@ -10,9 +10,26 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink("Movies list", destination: FilmsListView(viewModel: FilmsListViewModel()))
+        TabView {
+            NavigationView {
+                List {
+                    NavigationLink("Топ 250", destination: FilmsListView(viewModel: FilmsListViewModel()))
+                }
+                .listStyle(.inset)
+                .navigationTitle("Категории")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(.visible, for: .navigationBar)
+            }
+            .tabItem {
+                Label("Фильмы", systemImage: "list.dash")
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            
+            VStack {
+                
+            }
+            .tabItem {
+                Label("Рулетка", systemImage: "arrow.triangle.2.circlepath")
             }
         }
     }

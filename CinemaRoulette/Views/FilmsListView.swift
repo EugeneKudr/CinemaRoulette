@@ -14,21 +14,21 @@ struct FilmsListView: View {
     @State var selectedFilm: FilmsTopModel.Film?
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.films.enumerated().map({ $0 }), id: \.element.id) { index, film in
-                    FilmListItemView(film: film, selectedFilm: $selectedFilm)
-                        .onAppear { viewModel.requestMoreItemsIfNeeded(itemsCount: viewModel.films.count, index: index) }
-                }
-            }
-            .listStyle(.inset)
-            .sheet(item: $selectedFilm) { film in
-                FilmView(film: film)
-                    .presentationDetents([.height(300), .medium, .large])
-                    .presentationDragIndicator(.automatic)
+        List {
+            ForEach(viewModel.films.enumerated().map({ $0 }), id: \.element.id) { index, film in
+                FilmListItemView(film: film, selectedFilm: $selectedFilm)
+                    .onAppear { viewModel.requestMoreItemsIfNeeded(itemsCount: viewModel.films.count, index: index) }
             }
         }
+        .listStyle(.plain)
         .navigationTitle("Топ 250")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .sheet(item: $selectedFilm) { film in
+            FilmView(film: film)
+                .presentationDetents([.height(300), .medium, .large])
+                .presentationDragIndicator(.automatic)
+        }
     }
     
 }
