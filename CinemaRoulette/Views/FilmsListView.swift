@@ -10,14 +10,21 @@ import SwiftUI
 struct FilmsListView: View {
     
     @ObservedObject var viewModel: FilmsListViewModel
+    @EnvironmentObject var rouletteViewModel: RouletteViewModel
     
     @State var selectedFilm: FilmsTopModel.Film?
     
     var body: some View {
         List {
             ForEach(viewModel.films.enumerated().map({ $0 }), id: \.element.id) { index, film in
-                FilmListItemView(film: film, selectedFilm: $selectedFilm)
-                    .onAppear { viewModel.requestMoreItemsIfNeeded(itemsCount: viewModel.films.count, index: index) }
+                Button(action: {
+                    if let filmName = film.nameRu {
+                        rouletteViewModel.addItem(name: filmName)
+                    }
+                }, label: {
+                    FilmListItemView(film: film, selectedFilm: $selectedFilm)
+                        .onAppear { viewModel.requestMoreItemsIfNeeded(itemsCount: viewModel.films.count, index: index) }
+                })
             }
         }
         .listStyle(.plain)

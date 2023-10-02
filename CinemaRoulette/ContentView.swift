@@ -9,27 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var tabSelected: Tab = .categories
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
-        TabView {
-            NavigationView {
-                List {
-                    NavigationLink("Топ 250", destination: FilmsListView(viewModel: FilmsListViewModel()))
+        ZStack {
+            TabView(selection: $tabSelected) {
+                NavigationView {
+                    List {
+                        NavigationLink("Топ 250", destination: FilmsListView(viewModel: FilmsListViewModel()))
+                    }
+                    .listStyle(.inset)
+                    .navigationTitle("Категории")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbarBackground(.visible, for: .navigationBar)
                 }
-                .listStyle(.inset)
-                .navigationTitle("Категории")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbarBackground(.visible, for: .navigationBar)
-            }
-            .tabItem {
-                Label("Фильмы", systemImage: "list.dash")
-            }
-            .toolbarBackground(.visible, for: .tabBar)
-            
-            VStack {
+                .tag(Tab.categories)
                 
+                RouletteView()
+                    .tag(Tab.roulette)
             }
-            .tabItem {
-                Label("Рулетка", systemImage: "arrow.triangle.2.circlepath")
+            VStack {
+                Spacer()
+                CustomTabBar(selectedTab: $tabSelected)
             }
         }
     }

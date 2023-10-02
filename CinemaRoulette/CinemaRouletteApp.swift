@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct CinemaRouletteApp: App {
+    
+    @StateObject var rouletteViewModel = RouletteViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(rouletteViewModel)
                 .preferredColorScheme(.light)
         }
     }
+    
 }
