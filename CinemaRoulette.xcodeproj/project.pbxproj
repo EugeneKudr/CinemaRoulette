@@ -21,7 +21,8 @@
 		B9887DE62ACB186E00E1F88B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9887DE52ACB186E00E1F88B /* CustomTabBar.swift */; };
 		B9887DE82ACB3C0F00E1F88B /* RouletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9887DE72ACB3C0F00E1F88B /* RouletteViewModel.swift */; };
 		B9887DEA2ACB3C1D00E1F88B /* RouletteItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9887DE92ACB3C1D00E1F88B /* RouletteItemModel.swift */; };
-		B9887DEC2ACB42F100E1F88B /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9887DEB2ACB42F100E1F88B /* RouletteView.swift */; };
+		B9887DEC2ACB42F100E1F88B /* CinemaRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9887DEB2ACB42F100E1F88B /* CinemaRouletteView.swift */; };
+		B9887DEF2ACB48D200E1F88B /* SimpleRoulette in Frameworks */ = {isa = PBXBuildFile; productRef = B9887DEE2ACB48D200E1F88B /* SimpleRoulette */; };
 		B9BDCFE42AC38C2F00D6507D /* FilmsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */; };
 		B9BDCFE72AC38FD100D6507D /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE62AC38FD100D6507D /* ApiClient.swift */; };
 		B9BDCFE92AC399D000D6507D /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDCFE82AC399D000D6507D /* FilmsListView.swift */; };
@@ -64,7 +65,7 @@
 		B9887DE52ACB186E00E1F88B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		B9887DE72ACB3C0F00E1F88B /* RouletteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewModel.swift; sourceTree = "<group>"; };
 		B9887DE92ACB3C1D00E1F88B /* RouletteItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteItemModel.swift; sourceTree = "<group>"; };
-		B9887DEB2ACB42F100E1F88B /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		B9887DEB2ACB42F100E1F88B /* CinemaRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRouletteView.swift; sourceTree = "<group>"; };
 		B9BDCFE32AC38C2F00D6507D /* FilmsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewModel.swift; sourceTree = "<group>"; };
 		B9BDCFE62AC38FD100D6507D /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		B9BDCFE82AC399D000D6507D /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9887DEF2ACB48D200E1F88B /* SimpleRoulette in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +183,7 @@
 				B9BDCFEA2AC4402100D6507D /* FilmView.swift */,
 				B9887DE52ACB186E00E1F88B /* CustomTabBar.swift */,
 				B9887DE72ACB3C0F00E1F88B /* RouletteViewModel.swift */,
-				B9887DEB2ACB42F100E1F88B /* RouletteView.swift */,
+				B9887DEB2ACB42F100E1F88B /* CinemaRouletteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +215,9 @@
 			dependencies = (
 			);
 			name = CinemaRoulette;
+			packageProductDependencies = (
+				B9887DEE2ACB48D200E1F88B /* SimpleRoulette */,
+			);
 			productName = CinemaRoulette;
 			productReference = B954C1BC2AC1D03000100AC5 /* CinemaRoulette.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +290,9 @@
 				Base,
 			);
 			mainGroup = B954C1B32AC1D03000100AC5;
+			packageReferences = (
+				B9887DED2ACB48D200E1F88B /* XCRemoteSwiftPackageReference "SimpleRoulette" */,
+			);
 			productRefGroup = B954C1BD2AC1D03000100AC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,7 +347,7 @@
 				B954C1F12AC2F3E000100AC5 /* FilmsTopModel.swift in Sources */,
 				B9BDCFE42AC38C2F00D6507D /* FilmsListViewModel.swift in Sources */,
 				B954C1C02AC1D03000100AC5 /* CinemaRouletteApp.swift in Sources */,
-				B9887DEC2ACB42F100E1F88B /* RouletteView.swift in Sources */,
+				B9887DEC2ACB42F100E1F88B /* CinemaRouletteView.swift in Sources */,
 				B9BDCFE72AC38FD100D6507D /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9887DED2ACB48D200E1F88B /* XCRemoteSwiftPackageReference "SimpleRoulette" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fummicc1/SimpleRoulette.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9887DEE2ACB48D200E1F88B /* SimpleRoulette */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9887DED2ACB48D200E1F88B /* XCRemoteSwiftPackageReference "SimpleRoulette" */;
+			productName = SimpleRoulette;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B954C1B42AC1D03000100AC5 /* Project object */;
 }

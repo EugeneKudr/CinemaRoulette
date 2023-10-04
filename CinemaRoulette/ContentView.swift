@@ -29,7 +29,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.categories)
                 
-                RouletteView()
+                CinemaRouletteView()
                     .tag(Tab.roulette)
             }
             VStack {

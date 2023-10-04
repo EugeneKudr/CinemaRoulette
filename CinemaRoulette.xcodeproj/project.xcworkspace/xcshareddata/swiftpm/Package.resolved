@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "simpleroulette",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fummicc1/SimpleRoulette.git",
+      "state" : {
+        "revision" : "d03f21e477ef78714d4966a6c0d656ac3b24a800",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 2
+}
